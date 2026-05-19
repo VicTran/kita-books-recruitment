@@ -1098,18 +1098,23 @@
       }
 
       // --- Custom Engagement Events ---
+      // 0. Standard ViewContent Event
+      if (window.fbq) {
+        window.fbq('track', 'ViewContent');
+      }
+
       // 1. Time on Page (Ontime)
-      const timeThresholds = [15, 30, 60];
+      const timeThresholds = [10, 30, 60, 90];
       timeThresholds.forEach(seconds => {
         setTimeout(() => {
           if (window.fbq) {
-            window.fbq('trackCustom', 'TimeOnPage', { seconds });
+            window.fbq('trackCustom', `TimeOnPage_${seconds}_seconds`);
           }
         }, seconds * 1000);
       });
 
       // 2. Scroll Depth (Lăn trang)
-      let scrollThresholds = { 25: false, 50: false, 75: false, 90: false };
+      let scrollThresholds = { 25: false, 50: false, 75: false, 100: false };
       window.addEventListener('scroll', () => {
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         if (scrollHeight <= 0) return;
@@ -1119,7 +1124,7 @@
           if (scrollPercent >= parseInt(threshold) && !scrollThresholds[threshold]) {
             scrollThresholds[threshold] = true;
             if (window.fbq) {
-              window.fbq('trackCustom', 'ScrollDepth', { percentage: parseInt(threshold) });
+              window.fbq('trackCustom', `ScrollDepth_${threshold}_percent`);
             }
           }
         }
