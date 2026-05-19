@@ -556,7 +556,7 @@
       </p>
 </div>
 <div class="bg-surface-container-lowest editorial-border p-6 md:p-12 shadow-sm shadow-xl border-primary/10">
-<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<form id="recruitment-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="fullname">Họ và tên <span class="text-error">*</span></label>
 <input class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary h-12 md:h-14 px-4" id="fullname" placeholder="Nguyễn Văn A" required="" type="text">
@@ -643,6 +643,205 @@
 </div>
 </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('recruitment-form');
+  if (!form) return;
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.innerHTML;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Vô hiệu hóa nút và hiển thị trạng thái loading
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <span class="inline-block animate-spin mr-2">⏳</span> Đang chuẩn bị gửi...
+    `;
+
+    try {
+      const full_name = document.getElementById('fullname').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const goals = document.getElementById('goals').value;
+      const rawSource = document.getElementById('source').value;
+
+      const sourceMap = {
+        'facebook': 'Facebook',
+        'tiktok': 'TikTok',
+        'website': 'Website công ty',
+        'referral': 'Giới thiệu bạn bè',
+        'group': 'Khác',
+        'school': 'Khác',
+        'other': 'Khác'
+      };
+      const source = sourceMap[rawSource] || 'Khác';
+
+      // 1. Upload file CV
+      const cvInput = document.getElementById('cv_upload');
+      if (!cvInput.files || cvInput.files.length === 0) {
+        alert('Vui lòng chọn file CV!');
+        resetButton();
+        return;
+      }
+      const cvFile = cvInput.files[0];
+
+      submitBtn.innerHTML = `<span class="inline-block animate-spin mr-2">⏳</span> Đang tải CV lên hệ thống...`;
+
+      // Gọi API lấy Signed URL để upload lên Supabase
+      const cvUrlRes = await fetch('https://phongvan.kitagroupvn.com/ung-tuyen', {
+        method: 'POST',
+        headers: {
+          'Next-Action': '60016c22e74dbbdfd4074b1fdad87bf9a962efe876',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([cvFile.name, 'cv-files'])
+      });
+
+      const cvUrlText = await cvUrlRes.text();
+      const cvUrlData = parseNextActionResult(cvUrlText);
+
+      if (!cvUrlData || !cvUrlData.success) {
+        throw new Error(cvUrlData ? cvUrlData.error : 'Không thể lấy link tải CV lên.');
+      }
+
+      // Upload file trực tiếp lên Supabase Storage
+      const cvUploadRes = await fetch(cvUrlData.signedUrl, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': cvFile.type || 'application/octet-stream'
+        },
+        body: cvFile
+      });
+
+      if (!cvUploadRes.ok) {
+        throw new Error('Upload CV lên bộ lưu trữ thất bại.');
+      }
+
+      const cv_url = cvUrlData.publicUrl;
+      const cv_filename = cvFile.name;
+
+      // 2. Upload file Portfolio (nếu có)
+      let portfolio_files = [];
+      const portInput = document.getElementById('portfolio_upload');
+      if (portInput && portInput.files && portInput.files.length > 0) {
+        const portFile = portInput.files[0];
+        submitBtn.innerHTML = `<span class="inline-block animate-spin mr-2">⏳</span> Đang tải Portfolio...`;
+
+        const portUrlRes = await fetch('https://phongvan.kitagroupvn.com/ung-tuyen', {
+          method: 'POST',
+          headers: {
+            'Next-Action': '60016c22e74dbbdfd4074b1fdad87bf9a962efe876',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify([portFile.name, 'portfolio-files'])
+        });
+
+        const portUrlText = await portUrlRes.text();
+        const portUrlData = parseNextActionResult(portUrlText);
+
+        if (portUrlData && portUrlData.success) {
+          const portUploadRes = await fetch(portUrlData.signedUrl, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': portFile.type || 'application/octet-stream'
+            },
+            body: portFile
+          });
+
+          if (portUploadRes.ok) {
+            portfolio_files.push({
+              name: portFile.name,
+              url: portUrlData.publicUrl
+            });
+          }
+        }
+      }
+
+      // 3. Gửi hồ sơ ứng tuyển
+      submitBtn.innerHTML = `<span class="inline-block animate-spin mr-2">⏳</span> Đang nộp hồ sơ...`;
+
+      const submitRes = await fetch('https://phongvan.kitagroupvn.com/ung-tuyen', {
+        method: 'POST',
+        headers: {
+          'Next-Action': '40e94fc1090cffa12838939fbc348b10e978975abc',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([{
+          full_name,
+          phone,
+          email,
+          department: 'marketing',
+          position: 'Marketing Fresher / Junior (Landing Page)',
+          source,
+          portfolio_url: '',
+          hr_note: goals,
+          cv_url,
+          cv_filename,
+          portfolio_files
+        }])
+      });
+
+      const submitText = await submitRes.text();
+      const submitData = parseNextActionResult(submitText);
+
+      if (submitData && submitData.success) {
+        // Thay thế Form bằng giao diện thành công sang trọng
+        const formParent = form.parentElement;
+        formParent.innerHTML = `
+          <div class="text-center py-16 px-4">
+            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">Ứng tuyển thành công!</h3>
+            <p class="text-on-surface-variant max-w-md mx-auto mb-8">
+              Hồ sơ của bạn đã được chuyển thẳng đến bộ phận Tuyển dụng KITA BOOKS. Chúng tôi sẽ phản hồi kết quả trong vòng 2-3 ngày làm việc. Chúc bạn may mắn! 🍀
+            </p>
+            <button onclick="window.location.reload()" class="bg-[#003366] text-white px-8 py-3 rounded font-bold hover:opacity-95 transition-opacity">
+              Quay lại
+            </button>
+          </div>
+        `;
+      } else {
+        throw new Error(submitData ? submitData.error : 'Hệ thống từ chối hồ sơ. Vui lòng thử lại.');
+      }
+
+    } catch (err) {
+      console.error(err);
+      alert('Có lỗi xảy ra khi nộp hồ sơ: ' + err.message);
+      resetButton();
+    }
+  });
+
+  function resetButton() {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnText;
+  }
+
+  function parseNextActionResult(text) {
+    try {
+      const lines = text.split('\\n');
+      for (const line of lines) {
+        const colonIndex = line.indexOf(':');
+        if (colonIndex !== -1) {
+          const jsonPart = line.substring(colonIndex + 1);
+          const parsed = JSON.parse(jsonPart);
+          if (parsed && typeof parsed === 'object' && parsed.success !== undefined) {
+            return parsed;
+          }
+        }
+      }
+    } catch (e) {
+      console.error('Lỗi phân tích phản hồi:', e);
+    }
+    return null;
+  }
+});
+</script>
 
 
 
