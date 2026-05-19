@@ -9,15 +9,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- Preload Critical LCP Hero Image -->
-  <link rel="preload" as="image" href="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200">
+  <!-- Preload Critical LCP Hero Image with Responsive srcset -->
+  <link rel="preload" as="image"
+    href="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200"
+    imagesrcset="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w600 600w,
+                 https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200 1200w"
+    imagesizes="(max-width: 768px) 100vw, 50vw">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;600;700&amp;display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet">
+  <!-- Asynchronously load Google Fonts to prevent render-blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;600;700&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;600;700&amp;display=swap">
+  </noscript>
+
+  <!-- Asynchronously load Material Symbols Outlined to prevent render-blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap">
+  </noscript>
+
+  <!-- Critical layout styling (render-blocking but tiny/fast) -->
   <link rel="stylesheet" href="style.css">
   <!-- Meta Pixel Code -->
   <script>
@@ -114,7 +127,10 @@
             class="aspect-[4/3] lg:aspect-[3/4] bg-surface-container-low overflow-hidden editorial-border relative z-10 p-1 md:p-2">
             <img alt="A premium editorial hero collage for KITA BOOKS growth marketing."
               class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200">
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200"
+              srcset="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w600 600w,
+                      https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy=w1200 1200w"
+              sizes="(max-width: 768px) 100vw, 50vw">
           </div>
         </div>
       </div>
@@ -150,7 +166,10 @@
         <div class="flex justify-center -mt-2">
           <div class="editorial-border overflow-hidden bg-surface-container-low shadow-sm max-w-5xl w-full">
             <img alt="A professional growth marketing illustration for KITA BOOKS." class="w-full h-auto object-cover" loading="lazy"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuATnVhRQFxZAEVE1HnQYYCld1UU340hvr4J9DASnpMJ9TELLrgfEit20_cFDwPNBSBmJFwhtQXtxKcfn2RkJOcC19UXGiXY3BY22Rxt0pMcT2D9FHLyToYu9EiVcDCDCmwG0xsepHp4foBixn-adLSXDkhVXUSdOV5KO9495cvf74GaRh3ooph4GNCfMdB2zCTavBxP0Oi5Y6qTgnvP0qpW_muRimet8cLytx8ps3F7j08FY-8ywLKn8ZRgv-XsLziYhWG08Jj285-C=w1200">
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuATnVhRQFxZAEVE1HnQYYCld1UU340hvr4J9DASnpMJ9TELLrgfEit20_cFDwPNBSBmJFwhtQXtxKcfn2RkJOcC19UXGiXY3BY22Rxt0pMcT2D9FHLyToYu9EiVcDCDCmwG0xsepHp4foBixn-adLSXDkhVXUSdOV5KO9495cvf74GaRh3ooph4GNCfMdB2zCTavBxP0Oi5Y6qTgnvP0qpW_muRimet8cLytx8ps3F7j08FY-8ywLKn8ZRgv-XsLziYhWG08Jj285-C=w1200"
+              srcset="https://lh3.googleusercontent.com/aida-public/AB6AXuATnVhRQFxZAEVE1HnQYYCld1UU340hvr4J9DASnpMJ9TELLrgfEit20_cFDwPNBSBmJFwhtQXtxKcfn2RkJOcC19UXGiXY3BY22Rxt0pMcT2D9FHLyToYu9EiVcDCDCmwG0xsepHp4foBixn-adLSXDkhVXUSdOV5KO9495cvf74GaRh3ooph4GNCfMdB2zCTavBxP0Oi5Y6qTgnvP0qpW_muRimet8cLytx8ps3F7j08FY-8ywLKn8ZRgv-XsLziYhWG08Jj285-C=w600 600w,
+                      https://lh3.googleusercontent.com/aida-public/AB6AXuATnVhRQFxZAEVE1HnQYYCld1UU340hvr4J9DASnpMJ9TELLrgfEit20_cFDwPNBSBmJFwhtQXtxKcfn2RkJOcC19UXGiXY3BY22Rxt0pMcT2D9FHLyToYu9EiVcDCDCmwG0xsepHp4foBixn-adLSXDkhVXUSdOV5KO9495cvf74GaRh3ooph4GNCfMdB2zCTavBxP0Oi5Y6qTgnvP0qpW_muRimet8cLytx8ps3F7j08FY-8ywLKn8ZRgv-XsLziYhWG08Jj285-C=w1200 1200w"
+              sizes="(max-width: 1024px) 100vw, 80vw">
           </div>
         </div>
       </div>
@@ -496,7 +515,10 @@
           <div class="lg:col-span-7">
             <div class="editorial-border overflow-hidden bg-surface-container-low shadow-sm">
               <img alt="Lộ trình tăng trưởng thu nhập tại KITA BOOKS" class="w-full h-auto object-cover" loading="lazy"
-                src="https://lh3.googleusercontent.com/aida/ADBb0uiwyYTtvvttLB3uJ3ZVOC3PrZHI6kpOSf-afl8Us7jRbbqO9RdOiCMHMaEyPFpu6waMBAYXpDrb0e-teZu-qYj0jeNLOwWvp9P1LM33JTReWfU1ZQ2wrHh1WmEJR68N00-2fM7hKTj2s1twTnG_x8ypvswFpOh4Oxxoo7CSYT5bYRAAN3jWt0w22hlY96166oTpc_oGPufq6cQdsm3lJd20n-cvIBx7YEsFT4hNvEdG-_GasgKdvPW_eRX9=w1200">
+                src="https://lh3.googleusercontent.com/aida/ADBb0uiwyYTtvvttLB3uJ3ZVOC3PrZHI6kpOSf-afl8Us7jRbbqO9RdOiCMHMaEyPFpu6waMBAYXpDrb0e-teZu-qYj0jeNLOwWvp9P1LM33JTReWfU1ZQ2wrHh1WmEJR68N00-2fM7hKTj2s1twTnG_x8ypvswFpOh4Oxxoo7CSYT5bYRAAN3jWt0w22hlY96166oTpc_oGPufq6cQdsm3lJd20n-cvIBx7YEsFT4hNvEdG-_GasgKdvPW_eRX9=w1200"
+                srcset="https://lh3.googleusercontent.com/aida/ADBb0uiwyYTtvvttLB3uJ3ZVOC3PrZHI6kpOSf-afl8Us7jRbbqO9RdOiCMHMaEyPFpu6waMBAYXpDrb0e-teZu-qYj0jeNLOwWvp9P1LM33JTReWfU1ZQ2wrHh1WmEJR68N00-2fM7hKTj2s1twTnG_x8ypvswFpOh4Oxxoo7CSYT5bYRAAN3jWt0w22hlY96166oTpc_oGPufq6cQdsm3lJd20n-cvIBx7YEsFT4hNvEdG-_GasgKdvPW_eRX9=w600 600w,
+                        https://lh3.googleusercontent.com/aida/ADBb0uiwyYTtvvttLB3uJ3ZVOC3PrZHI6kpOSf-afl8Us7jRbbqO9RdOiCMHMaEyPFpu6waMBAYXpDrb0e-teZu-qYj0jeNLOwWvp9P1LM33JTReWfU1ZQ2wrHh1WmEJR68N00-2fM7hKTj2s1twTnG_x8ypvswFpOh4Oxxoo7CSYT5bYRAAN3jWt0w22hlY96166oTpc_oGPufq6cQdsm3lJd20n-cvIBx7YEsFT4hNvEdG-_GasgKdvPW_eRX9=w1200 1200w"
+                sizes="(max-width: 1024px) 100vw, 60vw">
             </div>
           </div>
         </div>
