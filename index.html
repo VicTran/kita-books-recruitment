@@ -1,0 +1,654 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head></head><body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">```html
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tuyển dụng Nhân viên Marketing - KITA BOOKS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-fixed-dim": "#a7c8ff",
+                "surface-container-highest": "#e3e2df",
+                "surface-container-high": "#e9e8e4",
+                "outline": "#737780",
+                "on-tertiary-fixed-variant": "#802916",
+                "on-secondary-fixed-variant": "#5d4201",
+                "surface-tint": "#3a5f94",
+                "surface-container-lowest": "#ffffff",
+                "secondary": "#775a19",
+                "surface-bright": "#faf9f5",
+                "surface": "#faf9f5",
+                "on-tertiary-container": "#ed7b61",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#785a1a",
+                "on-surface": "#1b1c1a",
+                "surface-variant": "#e3e2df",
+                "background": "#faf9f5",
+                "error": "#ba1a1a",
+                "tertiary-fixed-dim": "#ffb4a3",
+                "tertiary-fixed": "#ffdad2",
+                "secondary-container": "#fed488",
+                "tertiary": "#420700",
+                "primary-container": "#003366",
+                "on-surface-variant": "#43474f",
+                "tertiary-container": "#651605",
+                "on-tertiary-fixed": "#3d0600",
+                "inverse-on-surface": "#f2f1ed",
+                "primary": "#001e40",
+                "surface-dim": "#dbdad6",
+                "secondary-fixed": "#ffdea5",
+                "surface-container-low": "#f4f4f0",
+                "inverse-surface": "#2f312e",
+                "surface-container": "#efeeea",
+                "on-error": "#ffffff",
+                "on-primary-fixed-variant": "#1f477b",
+                "secondary-fixed-dim": "#e9c176",
+                "on-error-container": "#93000a",
+                "on-background": "#1b1c1a",
+                "outline-variant": "#c3c6d1",
+                "on-primary-fixed": "#001b3c",
+                "on-primary-container": "#799dd6",
+                "inverse-primary": "#a7c8ff",
+                "on-primary": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#261900",
+                "primary-fixed": "#d5e3ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "80px",
+                "section-gap": "120px",
+                "unit": "8px",
+                "gutter": "32px",
+                "margin-mobile": "20px"
+        },
+        "fontFamily": {
+                "headline-lg": ["Libre Caslon Text"],
+                "label-lg": ["Hanken Grotesk"],
+                "display-lg": ["Libre Caslon Text"],
+                "body-lg": ["Hanken Grotesk"],
+                "label-sm": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Libre Caslon Text"],
+                "headline-md": ["Libre Caslon Text"],
+                "body-md": ["Hanken Grotesk"],
+                "headline-sm": ["Libre Caslon Text"]
+        },
+        "fontSize": {
+                "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+        html { scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .fill-icon { font-variation-settings: 'FILL' 1; }
+        .timeline-line { position: absolute; left: 50%; transform: translateX(-50%); width: 1px; border-left: 1px dashed theme('colors.primary'); top: 0; bottom: 0; z-index: 0; }
+        @media (max-width: 768px) { 
+            .timeline-line { left: 24px; transform: none; } 
+            .mobile-swipe-container { 
+                display: flex; 
+                overflow-x: auto; 
+                scroll-snap-type: x mandatory; 
+                gap: 16px; 
+                padding-bottom: 20px; 
+                margin-left: -20px; 
+                margin-right: -20px; 
+                padding-left: 20px; 
+                padding-right: 20px; 
+                scrollbar-width: none; 
+            }
+            .mobile-swipe-container::-webkit-scrollbar { display: none; }
+            .mobile-swipe-item { flex: 0 0 85%; scroll-snap-align: start; }
+        }
+        /* Editorial borders */
+        .editorial-border { border: 1px solid theme('colors.outline-variant'); }
+        .editorial-border-b { border-bottom: 1px solid theme('colors.outline-variant'); }
+        .editorial-border-t { border-top: 1px solid theme('colors.outline-variant'); }
+    </style>
+<!-- 1. Header (TopNavBar) -->
+<nav class="bg-surface/90 backdrop-blur-md text-primary docked full-width top-0 sticky z-50 editorial-border-b transition-all duration-300">
+<div class="flex justify-between items-center w-full py-4 md:py-6 max-w-7xl mx-auto px-margin-mobile md:px-gutter">
+<a class="font-headline-md text-headline-sm md:text-headline-md font-bold tracking-tight text-primary" href="#">KITA BOOKS</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-lg text-label-lg text-primary uppercase tracking-widest border-b border-primary pb-1" href="#hanh-trinh">Công việc</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors" href="#hanh-trinh">Hành trình</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors" href="#thu-nhap">Thu nhập</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors" href="#quyen-loi">Quyền lợi</a>
+</div>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-lg text-[12px] md:text-label-lg uppercase px-4 md:px-8 py-2 md:py-3 rounded hover:bg-primary-container hover:text-on-primary-container transition-colors" href="#ung-tuyen">
+                Ứng tuyển
+            </a>
+</div>
+</nav>
+<main>
+<!-- 1. Hero Section -->
+<section class="px-margin-mobile md:px-gutter max-w-7xl mx-auto py-6 md:py-[80px]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
+<div class="lg:col-span-6 lg:pr-12 order-2 lg:order-1">
+<span class="inline-block font-label-lg text-label-sm md:text-label-lg text-secondary mb-3 md:mb-6 tracking-[0.1em] uppercase border-b border-secondary pb-1 md:pb-2">Tuyển dụng Marketing - KITA BOOKS</span>
+<h1 class="font-headline-lg-mobile text-[28px] md:text-headline-lg-mobile lg:font-display-lg lg:text-display-lg text-primary mb-4 md:mb-8 leading-[1.2] md:leading-tight balance">Thu nhập không giới hạn. <br>KITA BOOKS ở đây để giúp bạn trở nên <i class="text-secondary font-serif">xứng đáng với con số đó.</i></h1>
+<div class="mb-6 md:mb-10"><p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-4 md:mb-6 max-w-xl">Dành cho Marketing Fresher / Junior: Nơi bạn được học qua thực chiến, dẫn dắt bởi Mentor để làm chủ Content, Video, Ads và Data. Thu nhập của bạn sẽ lớn lên cùng giá trị thực mà bạn tạo ra mỗi ngày.</p></div>
+<div class="flex flex-col sm:flex-row gap-3 md:gap-6">
+<a class="bg-primary text-on-primary font-label-lg text-label-lg uppercase px-8 py-4 hover:bg-primary-container hover:text-on-primary-container transition-colors inline-flex items-center justify-center gap-3 w-full sm:w-auto" href="#ung-tuyen">
+<span class="">Ứng tuyển ngay</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-primary text-primary font-label-lg text-label-lg uppercase px-8 py-4 hover:text-secondary hover:border-secondary transition-colors inline-flex items-center justify-center gap-2 w-full sm:w-auto" href="#hanh-trinh">
+<span class="">Xem hành trình phát triển</span>
+</a>
+</div><div class="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 border-t border-outline-variant pt-6 md:pt-8"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">person_search</span><span class="font-label-lg text-label-sm md:text-label-lg">Marketing Fresher / Junior</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">analytics</span><span class="font-label-lg text-label-sm md:text-label-lg">Content + Video + Ads + Data</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">business_center</span><span class="font-label-lg text-label-sm md:text-label-lg">Hybrid 5 ngày văn phòng + 1 ngày online</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">payments</span><span class="font-label-lg text-label-sm md:text-label-lg">Lương 9-12 triệu + Hoa hồng không giới hạn</span></div></div>
+</div>
+<div class="lg:col-span-6 relative order-1 lg:order-2">
+<div class="aspect-[4/3] lg:aspect-[3/4] bg-surface-container-low overflow-hidden editorial-border relative z-10 p-1 md:p-2">
+<img alt="A premium editorial hero collage for KITA BOOKS growth marketing." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8fU9alkxhHS_T7GBHLrqOabdjJb-EKzdhGHs63V0G11rOXnUdsHGfxN1pS4jamkPqdyHv5byayjWTQjA-HK9ZYFmc0UQj6YQwt9TdlO_Se6x1odo91K0bzBPnc0VSEiX2g0dK7nBXa2eDzZTK0xcunrr-svUD-_QWSuCSdYZIKbv8-dmpXBn5OIsXml0-8gmprQXgfmdJ0eDy7KjqsxT9PqREg-w3XXKg7SL7pm20x8Q8X2cGXyefgygiipYP6L4XpwW8uejj-Yy">
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Giải mã "Thu nhập không giới hạn" -->
+<section class="px-margin-mobile md:px-gutter editorial-border-t editorial-border-b bg-surface-container-lowest py-8 md:py-[80px]" id="gioi-thieu">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-8 md:mb-16">
+<h2 class="font-headline-lg text-[24px] md:text-headline-lg text-primary mb-4 md:mb-6 leading-tight md:leading-relaxed balance tracking-tight">Thu nhập không giới hạn không phải là một lời hứa đẹp. Đó là một cách chúng tôi nhìn vào sự trưởng thành của bạn.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-4xl mx-auto leading-relaxed mb-6 md:mb-10"><span class="block mb-4 md:mb-8">Thu nhập tại KITA BOOKS không dừng lại ở một con số cố định. Khi bạn lớn hơn mỗi ngày, thu nhập của bạn cũng sẽ lớn lên theo.</span></p><ul class="text-left max-w-lg mx-auto space-y-3 md:space-y-2 mb-6 md:mb-10 list-none"><li class="flex items-start gap-3 md:gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-base mt-1 shrink-0">check_circle</span> Nâng cao năng lực chuyên môn (Content, Video, Ads, Data).</li><li class="flex items-start gap-3 md:gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-base mt-1 shrink-0">check_circle</span> Tối ưu hóa hiệu quả chiến dịch và doanh số thực tế.</li><li class="flex items-start gap-3 md:gap-2 text-body-md"><span class="material-symbols-outlined text-secondary text-base mt-1 shrink-0">check_circle</span> Nhận thưởng xứng đáng với từng giá trị thật bạn đóng góp.</li></ul><span class="block italic text-primary font-medium text-center px-4 md:px-0 text-sm md:text-body-md">Tại đây, chúng tôi không chỉ trả lương cho thời gian, chúng tôi trân trọng và đầu tư vào sự trưởng thành của bạn.</span>
+</div>
+<div class="flex justify-center -mt-2">
+<div class="editorial-border overflow-hidden bg-surface-container-low shadow-sm max-w-5xl w-full">
+<img alt="A professional growth marketing illustration for KITA BOOKS." class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATnVhRQFxZAEVE1HnQYYCld1UU340hvr4J9DASnpMJ9TELLrgfEit20_cFDwPNBSBmJFwhtQXtxKcfn2RkJOcC19UXGiXY3BY22Rxt0pMcT2D9FHLyToYu9EiVcDCDCmwG0xsepHp4foBixn-adLSXDkhVXUSdOV5KO9495cvf74GaRh3ooph4GNCfMdB2zCTavBxP0Oi5Y6qTgnvP0qpW_muRimet8cLytx8ps3F7j08FY-8ywLKn8ZRgv-XsLziYhWG08Jj285-C">
+</div>
+</div>
+</div>
+</section>
+<!-- 3. KITA BOOKS sẽ giúp bạn như thế nào -->
+<section class="px-margin-mobile md:px-gutter max-w-7xl mx-auto overflow-hidden py-8 md:py-[80px]">
+<div class="max-w-3xl mb-8 md:mb-16 mx-auto text-center">
+<h2 class="font-headline-lg text-[22px] md:text-headline-lg text-primary mb-4 text-center mx-auto max-w-[280px] md:max-w-none tracking-tight text-balance md:text-wrap">KITA BOOKS sẽ giúp bạn&nbsp;<div class="">như thế nào ?</div></h2>
+</div>
+<div class="mobile-swipe-container md:grid md:grid-cols-12 md:gap-6">
+<!-- Pillar 1 -->
+<div class="mobile-swipe-item md:col-span-7 bg-surface-container-lowest editorial-border p-6 md:p-12 flex flex-col justify-between">
+<div>
+<img alt="Giúp bạn giỏi lên" class="w-10 h-10 md:w-12 md:h-12 mb-6 md:mb-8 block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRF7nV-5Gcd9OgIzQ1j_f5bHexVDTsxzx9cjatf1lbCclQV157c_ehnpqzHKUw99hvD4D8ZMT5kqpBBNx12bw0ao3AAOdmgQYsGFdOORJ8TO2eMYstXkiysAwU2wxG4rlvd6xfv70vQMPqX5hvZcLqwbibF9af4zbW9Qez3_AzmTqwTfgnlvYVdulGOl9Zys2qxfYGewpy7o6eyTPPSehzTMyHKuGmzL9ZOAc_r9kWzkb60eAzP2Y6esDs-ddv5XWgkkx4Tb8ohMrw">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 md:mb-4">Giúp bạn giỏi lên</h3>
+<ul class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant space-y-2 md:space-y-3 list-disc pl-5">
+<li class="">Onboarding 30 ngày để làm chủ Content, CapCut, Ads.</li>
+<li class="">Nâng trình thực chiến, làm nền tảng cho thu nhập đột phá.</li>
+</ul>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="mobile-swipe-item md:col-span-5 bg-surface-container-lowest editorial-border p-6 md:p-10 flex flex-col justify-between">
+<div>
+<img alt="Giúp bạn làm thật" class="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-6 block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBExgXXGzAV-erGEFQWLogug6Z3ZIm3RimKv9ukpfEOYyP0Q2TfZ1maOlOlGf7uT1LMNJav4I3s6s4whQ0m57ldXaLxlXlv1zu5emnBJmSef51rgKq_pJ3w3MQ4RczgiyyTVtmRmyiku4gJSbj5bVZ-lwbKOLVM6K0GeTR7RFRPTmfhhM0QNlNADvAAxNZvgYK6BQgdwTmoR1g9eFzXj-nj3_0FQBIcCQ2amk0nR2WC45YAi_GAoM592i3Nb-mRnLMt8WakZ0fg37Cq">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-3 md:mb-4">Giúp bạn làm thật</h3>
+<ul class="font-body-md text-body-sm md:text-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li class="">Cung cấp tài khoản premium và hệ thống đo lường real-time.</li>
+<li class="">Làm việc hiệu quả hơn để tối ưu KPI và thưởng doanh số.</li>
+</ul>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="mobile-swipe-item md:col-span-5 bg-surface-container-lowest editorial-border p-6 md:p-10 flex flex-col justify-between">
+<div>
+<img alt="Giúp bạn nhìn thấy tiến bộ" class="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-6 block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_FbylO1uTFDRTTtJLxjaw5IESbEXXMZKCvzSNUCLOPxHbEm22-G46o2rEDYPiBH-F4LRdZ23yS_uNrUk1I8OjSfcQ9wh1ZTqVUr_XvouQdwrsUTrrL5XPzvd288OHHuC2kzP6MOGPDLCJKPt2F_zaS_sEBjwMGkjo0_JW_rJ_J2jAuGrJ2Fpl-qCCLeIkt84qa86MIYMOmUuDxwRQqsXEBy2TeN5nbmUiJ9kpVj9JrK14B7cyLcIVQ5NelLZcqUy0EvlVntnmnRgJ">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-3 md:mb-4">Giúp bạn nhìn thấy tiến bộ</h3>
+<ul class="font-body-md text-body-sm md:text-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li class="">Mentor 1-1 theo sát, sửa lỗi và định hướng hàng tuần.</li>
+<li class="">Rút ngắn hành trình từ tiềm năng đến vị trí chuyên gia.</li>
+</ul>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="mobile-swipe-item md:col-span-7 bg-surface-container-lowest editorial-border p-6 md:p-12 flex flex-col justify-between">
+<div>
+<img alt="Giúp bạn biến năng lực thành thu nhập" class="w-10 h-10 md:w-12 md:h-12 mb-6 md:mb-8 block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx6Hrh1LLu0ppIBY-JcjWjApxzeZaGqkg3iBOJkS9jT_L2xRgAAAWyNTFYEPxYsD3i0TXTDMATI3Jz5-YDAiS6V9Kmz5aRazy19vR7bNAF85DWI5SAeFNkY8GsIKi1j9F6ZbZ0jZXHn5KAENAAtFxUGOE5ICbqK-edQcokYcafn_a0Xf4LmKGX9rTxdtXEybByJNMHC9ySJIZONO78z-WM2ygDh-pv-ARJhm4f5Mr3JoLxaGTefpK8Vft2Pd8S4SxW_rYcxBLo_bkL">
+<h3 class="font-headline-md text-headline-sm md:text-headline-md text-primary mb-3 md:mb-4">Giúp bạn biến năng lực thành thu nhập</h3>
+<ul class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant space-y-2 md:space-y-3 list-disc pl-5">
+<li class="">Lương cứng cạnh tranh cùng hệ thống hoa hồng minh bạch.</li>
+<li class="">Năng lực tăng đến đâu, con số thu nhập đi cùng đến đó.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Bạn sẽ làm gì (Một ngày tại KITA BOOKS) -->
+<section class="px-margin-mobile md:px-gutter bg-surface-container-low editorial-border-y py-8 md:py-[80px]" id="cong-viec">
+<div class="max-w-7xl mx-auto text-center"><div class="text-center">
+  <h2 class="font-headline-lg text-[24px] md:text-headline-lg text-primary mb-4 md:mb-8 balance tracking-tight leading-relaxed">
+    Một ngày tại KITA BOOKS:&nbsp;
+  </h2>
+  <p class="font-body-md md:font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 md:mb-20">
+    Kiến tạo các chiến dịch marketing đột phá, quản lý cộng đồng độc giả, và định hình phong cách sống qua từng ấn phẩm.
+  </p>
+</div>
+
+<div class="relative mt-4 md:mt-12">
+  <!-- Timeline Track (Desktop Only) -->
+  <div class="hidden md:block absolute top-[2.25rem] left-[10%] right-[10%] h-[1px] bg-primary/20 -z-10"></div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 lg:gap-8">
+    <!-- Step 1 -->
+    <div class="flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 md:gap-0">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shrink-0 md:mb-6 md:border-4 md:border-surface-container-low">1</div>
+      <div class="md:px-2">
+        <h3 class="font-headline-sm text-lg md:text-xl text-primary mb-1 md:mb-3 md:min-h-[3rem] flex items-center justify-start md:justify-center">Đọc &amp; Khơi nguồn cảm hứng</h3>
+        <p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Bắt đầu ngày mới bằng việc tìm kiếm những ý tưởng đắt giá từ kho tàng sách tinh hoa của KITA.</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 md:gap-0">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shrink-0 md:mb-6 md:border-4 md:border-surface-container-low">2</div>
+      <div class="md:px-2">
+        <h3 class="font-headline-sm text-lg md:text-xl text-primary mb-1 md:mb-3 md:min-h-[3rem] flex items-center justify-start md:justify-center">Sáng tạo nội dung chạm</h3>
+        <p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Biến những giá trị tri thức thành các mẩu nội dung thu hút, chạm đúng tâm lý độc giả trên mạng xã hội.</p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 md:gap-0">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shrink-0 md:mb-6 md:border-4 md:border-surface-container-low">3</div>
+      <div class="md:px-2">
+        <h3 class="font-headline-sm text-lg md:text-xl text-primary mb-1 md:mb-3 md:min-h-[3rem] flex items-center justify-start md:justify-center">Làm chủ hình ảnh &amp; video</h3>
+        <p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Trực tiếp quay dựng, sản xuất những video chất lượng cao, mang thông điệp tích cực đến hàng triệu người xem.</p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 md:gap-0">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shrink-0 md:mb-6 md:border-4 md:border-surface-container-low">4</div>
+      <div class="md:px-2">
+        <h3 class="font-headline-sm text-lg md:text-xl text-primary mb-1 md:mb-3 md:min-h-[3rem] flex items-center justify-start md:justify-center">Đọc vị dữ liệu</h3>
+        <p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Theo sát 'sức nóng' của chiến dịch thông qua số liệu thực tế để tối ưu hóa hiệu quả quảng cáo.</p>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="flex flex-row md:flex-col items-start md:items-center text-left md:text-center gap-4 md:gap-0">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shrink-0 md:mb-6 md:border-4 md:border-surface-container-low">5</div>
+      <div class="md:px-2">
+        <h3 class="font-headline-sm text-lg md:text-xl text-primary mb-1 md:mb-3 md:min-h-[3rem] flex items-center justify-start md:justify-center">Tối ưu &amp; Tạo kết quả</h3>
+        <p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Phối hợp cùng đội ngũ để chuyển hóa từng lượt tương tác thành kết quả tăng trưởng thực tế.</p>
+      </div>
+    </div>
+  </div>
+</div></div>
+</section>
+<!-- 5. Hành trình trưởng thành -->
+<section class="px-margin-mobile md:px-gutter max-w-7xl mx-auto overflow-hidden py-8 md:py-[80px]" id="hanh-trinh"><div class="max-w-7xl mx-auto">
+<div class="text-center mb-10 md:mb-20">
+<h2 class="font-headline-lg text-[26px] md:text-headline-lg text-primary mb-2 md:mb-4 balance mb-4 tracking-tight leading-relaxed">Hành trình trưởng thành tại KITA BOOKS</h2>
+<p class="font-body-md md:font-body-lg text-on-surface-variant max-w-2xl mx-auto italic text-sm md:text-body-lg">Mỗi bước đi là một sự chuyển mình, từ tâm hồn yêu sách đến người kiến tạo giá trị thực thụ.</p>
+</div>
+<div class="relative">
+<!-- Decorative Curve (Desktop) -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dashed border-primary-fixed-dim -translate-x-1/2 z-0 opacity-50"></div>
+<div class="mobile-swipe-container relative z-10 md:space-y-16">
+<!-- Stage 1 -->
+<div class="mobile-swipe-item flex flex-col md:flex-row items-center md:justify-between w-full">
+<div class="md:w-[42%] text-center md:text-right mb-4 md:mb-0">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-1 md:mb-2">Thấu cảm</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Thấu hiểu sản phẩm và tâm hồn độc giả để phụng sự từng trang sách.</p>
+</div>
+<div class="w-10 h-10 md:w-16 md:h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg editorial-border shrink-0">
+<span class="material-symbols-outlined text-xl md:text-3xl">menu_book</span>
+</div>
+<div class="hidden md:block md:w-[42%]"></div>
+</div>
+<!-- Stage 2 -->
+<div class="mobile-swipe-item flex flex-col md:flex-row items-center md:justify-between w-full">
+<div class="hidden md:block md:w-[42%] order-last md:order-first"></div>
+<div class="w-10 h-10 md:w-16 md:h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-lg editorial-border shrink-0">
+<span class="material-symbols-outlined text-xl md:text-3xl">movie</span>
+</div>
+<div class="md:w-[42%] text-center md:text-left mt-4 md:mt-0">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-1 md:mb-2">Kể chuyện</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Chuyển hóa giá trị sách thành những câu chuyện sống động qua content và video.</p>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="mobile-swipe-item flex flex-col md:flex-row items-center md:justify-between w-full">
+<div class="md:w-[42%] text-center md:text-right mb-4 md:mb-0">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-1 md:mb-2">Làm chủ dữ liệu</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Đọc hiểu ngôn ngữ của những con số để tối ưu hiệu quả chiến dịch.</p>
+</div>
+<div class="w-10 h-10 md:w-16 md:h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg editorial-border shrink-0">
+<span class="material-symbols-outlined text-xl md:text-3xl">leaderboard</span>
+</div>
+<div class="hidden md:block md:w-[42%]"></div>
+</div>
+<!-- Stage 4 -->
+<div class="mobile-swipe-item flex flex-col md:flex-row items-center md:justify-between w-full">
+<div class="hidden md:block md:w-[42%] order-last md:order-first"></div>
+<div class="w-10 h-10 md:w-16 md:h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-lg editorial-border shrink-0">
+<span class="material-symbols-outlined text-xl md:text-3xl">filter_alt</span>
+</div>
+<div class="md:w-[42%] text-center md:text-left mt-4 md:mt-0">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-1 md:mb-2">Kết nối giá trị</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Phối hợp cùng team Sales biến traffic thành kết quả doanh thu thực tế.</p>
+</div>
+</div>
+<!-- Stage 5 -->
+<div class="mobile-swipe-item flex flex-col md:flex-row items-center md:justify-between w-full">
+<div class="md:w-[42%] text-center md:text-right mb-4 md:mb-0">
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-1 md:mb-2">Tạo tác động</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Trực tiếp đề xuất và kiến tạo những cột mốc tăng trưởng mới.</p>
+</div>
+<div class="w-12 h-12 md:w-20 md:h-20 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl scale-110 border-4 border-surface shrink-0">
+<span class="material-symbols-outlined text-2xl md:text-4xl fill-icon">workspace_premium</span>
+</div>
+<div class="hidden md:block md:w-[42%]"></div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- 6. Thu nhập -->
+<section class="px-margin-mobile md:px-gutter bg-surface-container-lowest editorial-border-t py-8 md:py-[80px]" id="thu-nhap"><div class="max-w-7xl mx-auto">
+<div class="text-center mb-8 md:mb-16">
+<h2 class="font-headline-lg text-[24px] md:text-headline-lg text-primary mb-4 md:mb-6 leading-tight balance tracking-tight">Thu nhập không giới hạn</h2>
+<p class="font-body-md md:font-body-lg text-on-surface-variant max-w-3xl mx-auto">Thu nhập 12-15 triệu chỉ là điểm bắt đầu.&nbsp;</p><div class="">Điều đáng giá hơn là cơ chế để bạn tăng thu nhập bằng chính hiệu quả chiến dịch, kết quả công việc và tốc độ trưởng thành của mình</div><div class="">&nbsp;thông qua hệ thống hoa hồng không giới hạn.</div><p class=""></p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center mb-8 md:mb-16">
+<div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-1 gap-3 md:gap-6"><div class="editorial-border p-4 md:p-6 bg-surface-container-low flex items-start gap-4 md:gap-5">
+<div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-primary-container text-on-primary-container flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-xl md:text-2xl">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-0.5 md:mb-1">Lương cứng</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">7–9 triệu VNĐ/tháng (Cố định)</p>
+</div>
+</div>
+<div class="editorial-border p-4 md:p-6 bg-surface-container-low flex items-start gap-4 md:gap-5">
+<div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-xl md:text-2xl">monitoring</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-0.5 md:mb-1">Lương KPI</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">2- 3 triệu VNĐ/tháng (Theo hiệu quả công việc)</p>
+</div>
+</div>
+<div class="editorial-border p-4 md:p-6 bg-surface-container-low flex items-start gap-4 md:gap-5">
+<div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-primary-container text-on-primary-container flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-xl md:text-2xl">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-0.5 md:mb-1">Phụ cấp ăn trưa</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Áp dụng chính thức sau thời gian thử việc</p>
+</div>
+</div>
+<div class="editorial-border p-4 md:p-6 bg-surface-container-low flex items-start gap-4 md:gap-5">
+<div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-xl md:text-2xl">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-0.5 md:mb-1">Hoa hồng &amp; Thưởng bứt phá</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Hoa hồng doanh số không giớí hạn</p>
+</div>
+</div></div>
+<div class="lg:col-span-7">
+<div class="editorial-border overflow-hidden bg-surface-container-low shadow-sm">
+<img alt="Lộ trình tăng trưởng thu nhập tại KITA BOOKS" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiwyYTtvvttLB3uJ3ZVOC3PrZHI6kpOSf-afl8Us7jRbbqO9RdOiCMHMaEyPFpu6waMBAYXpDrb0e-teZu-qYj0jeNLOwWvp9P1LM33JTReWfU1ZQ2wrHh1WmEJR68N00-2fM7hKTj2s1twTnG_x8ypvswFpOh4Oxxoo7CSYT5bYRAAN3jWt0w22hlY96166oTpc_oGPufq6cQdsm3lJd20n-cvIBx7YEsFT4hNvEdG-_GasgKdvPW_eRX9">
+</div>
+</div>
+</div>
+<div class="text-center"><p class="font-headline-sm text-lg md:text-headline-sm italic text-secondary leading-relaxed px-4 md:px-0">"Bạn lớn lên đến đâu, thu nhập có cơ hội đi cùng bạn đến đó."</p></div>
+</div></section>
+<!-- 7. Đặc quyền tại KITA -->
+<section class="px-margin-mobile md:px-gutter max-w-7xl mx-auto overflow-hidden py-8 md:py-[80px]" id="quyen-loi"><h2 class="font-headline-lg text-[24px] md:text-headline-lg text-primary mb-8 md:mb-12 text-center max-w-[280px] md:max-w-none mx-auto tracking-tight"><span class="" style="white-space: pre-wrap;">Quyền lợi rõ ràng </span><div><span class="" style="white-space: pre-wrap;">phát triển dài hạn</span></div></h2><div class="mobile-swipe-container md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6"><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">health_and_safety</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Bảo vệ &amp; An tâm</h3><p class="text-sm md:text-body-md text-on-surface-variant">BHXH, BHYT, BHTN đầy đủ sau 2 tháng thử việc.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">home_work</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Làm việc Hybrid</h3><p class="text-sm md:text-body-md text-on-surface-variant">5 ngày văn phòng + thứ 7 làm việc online cuối tuần.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">schedule</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tự chủ thời gian</h3><p class="text-sm md:text-body-md text-on-surface-variant">Duy trì 8 tháng đạt KPI tốt, tặng thêm 1 ngày nghỉ phép.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">apartment</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Văn phòng</h3><p class="text-sm md:text-body-md text-on-surface-variant"></p><div class="x-element animation" id="TEXT-5dotdbo3" style="touch-action: manipulation; padding: 0px; margin: 0px; position: relative; font-size: 0px; place-self: start center; grid-area: 4 / 2 / 5 / 3; height: auto; width: 258px; color: rgb(0, 0, 0); font-family: Quicksand, sans-serif;"><p class="x-text ql-editor" style="touch-action: manipulation; padding: 0px; font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 14px; line-height: normal; font-family: Quicksand, sans-serif; height: 36px; outline: none; tab-size: 4; white-space: revert; overflow-wrap: break-word; display: inline-block; width: 258px; word-break: break-word; list-style-position: inside; --width: 100%; -webkit-text-stroke: 0px rgb(0, 0, 0); color: rgb(28, 28, 28);">KĐT The Manor Centre Park,<br>Định Công, Hà Nội</p></div><p class=""></p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">loyalty</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Đặc quyền mọt sách</h3><p class="text-sm md:text-body-md text-on-surface-variant">Mua mọi đầu sách tại KITA với giá ưu đãi 50%.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">school</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Đào tạo thực chiến</h3><p class="text-sm md:text-body-md text-on-surface-variant">Khóa học nội bộ miễn phí: Content, Ads, Video, Data &amp; AI tools.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">payments</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Ngân sách phát triển</h3><p class="text-sm md:text-body-md text-on-surface-variant">5 triệu VNĐ/năm dành riêng cho các khóa học chuyên môn tự chọn.</p></div><div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start"><span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">trending_up</span><h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Lộ trình &amp; Mentor</h3><p class="text-sm md:text-body-md text-on-surface-variant">Đồng hành 1-1 cùng Mentor và lộ trình thăng tiến rõ ràng.</p></div></div></section>
+<!-- 8. Onboarding 30 ngày -->
+<section class="px-margin-mobile md:px-gutter bg-surface-container-low editorial-border-y overflow-hidden py-8 md:py-[80px]">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="font-headline-lg text-[26px] md:text-headline-lg text-primary mb-4 md:mb-8 balance tracking-tight">Onboarding 30 Ngày</h2>
+<p class="font-body-md md:font-body-lg text-on-surface-variant max-w-2xl mx-auto px-4 text-sm md:text-body-lg">Chương trình hội nhập thiết kế riêng để bạn tỏa sáng nhanh nhất.</p>
+<div class="mobile-swipe-container md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 mt-8 md:mt-16 text-left">
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">menu_book</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tuần 1: Hòa nhập</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Thấu hiểu giá trị cốt lõi, văn hóa KITA BOOKS và linh hồn của những dòng sách tinh hoa.</p>
+</div>
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">build</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tuần 2: Đào tạo</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Làm chủ bộ công cụ thực chiến (Canva, CapCut, Ads Manager...) và hệ thống template quy chuẩn.</p>
+</div>
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">groups</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tuần 3: Thực chiến</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Trực tiếp triển khai nội dung dưới sự dẫn dắt 1-1 của Mentor giàu kinh nghiệm.</p>
+</div>
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">rocket_launch</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tuần 4: Tự chủ</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Bắt đầu vận hành độc lập, tối ưu hiệu quả và đo lường kết quả theo chỉ số KPI cơ bản.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Người phù hợp với hành trình này -->
+<section class="px-margin-mobile md:px-gutter max-w-7xl mx-auto overflow-hidden py-8 md:py-[80px]">
+<div class="text-center mb-8 md:mb-16">
+<h2 class="font-headline-lg text-[26px] md:text-headline-lg text-primary mb-4 balance tracking-tight leading-relaxed">Người phù hợp với&nbsp;<div class="">hành trình này</div></h2>
+<p class="font-body-md md:font-body-lg text-on-surface-variant max-w-3xl mx-auto px-2 text-sm md:text-body-lg">Tại KITA BOOKS, chúng mình không tìm kiếm siêu nhân. Chúng mình tìm kiếm những&nbsp;</p><div class="">cộng sự trẻ có chung niềm tin vào giá trị thực và khát khao được tôi luyện để trở thành những người làm Marketing chuyên nghiệp.</div><p class=""></p>
+</div>
+<div class="mobile-swipe-container md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+<!-- Pillar 1 -->
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">local_library</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Yêu sách &amp; Tin vào giá trị tri thức</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Những người tin vào sức mạnh của tri thức và muốn dùng năng lực marketing để lan tỏa those values to readers.</p>
+</div>
+<!-- Pillar 2 -->
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">psychology</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tư duy học nhanh &amp; Bản lĩnh</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Không ngại tiếp cận cái mới, sẵn sàng đổi mới cách làm và bản lĩnh đối mặt với thử thách để trưởng thành nhanh chóng.</p>
+</div>
+<!-- Pillar 3 -->
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">draw</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Đam mê sáng tạo &amp; Dữ liệu</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Thích thú với việc nhào nặn content, dựng video và hào hứng khi nhìn thấy kết quả công việc thể hiện qua các con số trên dashboard.</p>
+</div>
+<!-- Pillar 4 -->
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start transition-transform hover:-translate-y-1 duration-300 lg:col-start-1 lg:col-span-1">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">insights</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Tinh thần "Growth Mindset"</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Không ngại thử, không ngại sai. Với bạn, mỗi sai lầm là một bài học và quan trọng nhất là không ngại lớn lên cùng KITA BOOKS.</p>
+</div>
+<!-- Pillar 5 -->
+<div class="mobile-swipe-item editorial-border p-5 md:p-8 bg-surface-container-lowest flex flex-col items-start transition-transform hover:-translate-y-1 duration-300 lg:col-span-2">
+<span class="material-symbols-outlined text-secondary mb-4 md:mb-6 text-2xl md:text-3xl">model_training</span>
+<h3 class="font-headline-sm text-lg md:text-headline-sm text-primary mb-2 md:mb-4">Sẵn sàng đào tạo</h3>
+<p class="text-sm md:text-body-md text-on-surface-variant">Dù bạn chưa đủ kỹ năng nhưng có tố chất và nhiệt huyết, chúng mình luôn sẵn sàng đồng hành và đào tạo bạn bài bản từ con số 0.</p>
+</div>
+</div>
+</section>
+<!-- 10. Giải đáp thắc mắc -->
+<section class="px-margin-mobile md:px-gutter bg-surface-container-low py-8 md:py-[80px]" id="faq">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-8 md:mb-16">
+<h2 class="font-headline-lg text-[26px] md:text-headline-lg text-primary mb-4 balance mb-6 tracking-tight">Giải đáp thắc mắc</h2>
+<div class="w-12 h-0.5 bg-secondary mx-auto"></div>
+</div>
+<div class="space-y-3"><details class="group bg-surface-container-lowest editorial-border transition-all duration-300" open="">
+<summary class="flex justify-between items-center p-4 md:p-6 cursor-pointer list-none">
+<h3 class="font-headline-sm text-primary text-[17px] md:text-2xl pr-4 leading-tight">Em là Fresher có ứng tuyển được không?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+</summary>
+<div class="px-4 md:px-6 pb-4 md:pb-6 pt-1">
+<div class="editorial-border-t pt-3 md:pt-4">
+<p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Hoàn toàn được bạn nhé. Chúng mình trân trọng tố chất và tinh thần ham học hỏi hơn là số năm kinh nghiệm. Tại KITA BOOKS, tiềm năng của bạn luôn là ưu tiên hàng đầu.</p>
+</div>
+</div>
+</details>
+<details class="group bg-surface-container-lowest editorial-border transition-all duration-300" open="">
+<summary class="flex justify-between items-center p-4 md:p-6 cursor-pointer list-none">
+<h3 class="font-headline-sm text-primary text-[17px] md:text-2xl pr-4 leading-tight">Công ty có đào tạo không?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+</summary>
+<div class="px-4 md:px-6 pb-4 md:pb-6 pt-1">
+<div class="editorial-border-t pt-3 md:pt-4">
+<p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Có chứ! Bạn sẽ tham gia lộ trình Onboarding 30 ngày bài bản. Các Mentor dày dặn kinh nghiệm sẽ trực tiếp hướng dẫn bạn làm chủ Content, Ads và các công cụ AI mới nhất.</p>
+</div>
+</div>
+</details>
+<details class="group bg-surface-container-lowest editorial-border transition-all duration-300">
+<summary class="flex justify-between items-center p-4 md:p-6 cursor-pointer list-none">
+<h3 class="font-headline-sm text-primary text-[17px] md:text-2xl pr-4 leading-tight">Làm việc Hybrid là như thế nào ạ?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+</summary>
+<div class="px-4 md:px-6 pb-4 md:pb-6 pt-1">
+<div class="editorial-border-t pt-3 md:pt-4">
+<p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Bạn sẽ có 5 ngày làm việc tại văn phòng để tương tác và 1 ngày làm việc linh hoạt từ xa mỗi tuần.</p>
+</div>
+</div>
+</details>
+<details class="group bg-surface-container-lowest editorial-border transition-all duration-300">
+<summary class="flex justify-between items-center p-4 md:p-6 cursor-pointer list-none">
+<h3 class="font-headline-sm text-primary text-[17px] md:text-2xl pr-4 leading-tight">KPI ở đây có rõ ràng không?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+</summary>
+<div class="px-4 md:px-6 pb-4 md:pb-6 pt-1">
+<div class="editorial-border-t pt-3 md:pt-4">
+<p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Rất rõ ràng. Hệ thống đo lường real-time giúp bạn biết chính xác hiệu quả công việc để nhận thưởng xứng đáng.</p>
+</div>
+</div>
+</details>
+<details class="group bg-surface-container-lowest editorial-border transition-all duration-300">
+<summary class="flex justify-between items-center p-4 md:p-6 cursor-pointer list-none">
+<h3 class="font-headline-sm text-primary text-[17px] md:text-2xl pr-4 leading-tight">Em không quá giỏi đọc sách thì có sao không?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+</summary>
+<div class="px-4 md:px-6 pb-4 md:pb-6 pt-1">
+<div class="editorial-border-t pt-3 md:pt-4">
+<p class="text-sm md:text-body-md text-on-surface-variant leading-relaxed">Chỉ cần bạn có niềm tin vào giá trị tri thức, chúng mình sẽ giúp bạn tìm thấy cảm hứng trong từng trang sách.</p>
+</div>
+</div>
+</details></div></div></section></main><section class="px-margin-mobile md:px-gutter bg-surface-container-high py-8 md:py-[80px]" id="direct-application">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-10 md:mb-16">
+<h2 class="font-headline-lg text-[26px] md:text-headline-lg text-primary mb-4 md:mb-6 tracking-tight leading-tight balance">
+        Bắt đầu hành trình trưởng thành của bạn ngay hôm nay.
+      </h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Đừng để tài năng của bạn phải chờ đợi thêm nữa. Hãy gửi hồ sơ để chúng mình cùng viết tiếp những chương mới rực rỡ.
+      </p>
+</div>
+<div class="bg-surface-container-lowest editorial-border p-6 md:p-12 shadow-sm shadow-xl border-primary/10">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="fullname">Họ và tên <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary h-12 md:h-14 px-4" id="fullname" placeholder="Nguyễn Văn A" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="phone">Số điện thoại <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary h-12 md:h-14 px-4" id="phone" placeholder="09xx xxx xxx" required="" type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="email">Email <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary h-12 md:h-14 px-4" id="email" placeholder="email@example.com" required="" type="email">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="cv_upload">Upload CV <span class="text-error">*</span></label>
+<div class="relative">
+<input class="block w-full text-sm text-on-surface-variant file:mr-4 file:py-3.5 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-primary-container file:text-on-primary-container hover:file:bg-primary hover:file:text-on-primary cursor-pointer border border-outline-variant bg-surface-container-low h-12 md:h-14" id="cv_upload" required="" type="file">
+</div>
+</div><div class="space-y-2"><label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="portfolio_upload">Upload Portfolio (Hồ sơ năng lực)</label><div class="relative"><input class="block w-full text-sm text-on-surface-variant file:mr-4 file:py-3.5 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-primary-container file:text-on-primary-container hover:file:bg-primary hover:file:text-on-primary cursor-pointer border border-outline-variant bg-surface-container-low h-12 md:h-14" id="portfolio_upload" type="file"></div></div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="source">Bạn biết đến KITA BOOKS qua đâu? <span class="text-error">*</span></label>
+<select class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary h-12 md:h-14 px-4 appearance-none" id="source" required="">
+<option disabled="" selected="" value="">Chọn nguồn thông tin</option>
+<option value="facebook">Facebook</option>
+<option value="tiktok">TikTok</option>
+<option value="website">Website KITA BOOKS</option>
+<option value="referral">Bạn bè / người quen giới thiệu</option>
+<option value="group">Cộng đồng / group tuyển dụng</option>
+<option value="school">Trường học / giảng viên</option>
+<option value="other">Khác</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-lg text-label-sm text-primary uppercase tracking-widest flex items-center gap-1" for="goals">Bạn muốn phát triển điều gì nhất trong marketing? <span class="text-error">*</span></label>
+<textarea class="w-full bg-surface-container-low border-outline-variant focus:border-primary focus:ring-primary p-4 min-h-[120px]" id="goals" placeholder="Chia sẻ mục tiêu nghề nghiệp của bạn..." required=""></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-[#003366] text-white font-label-lg text-label-lg uppercase py-5 hover:opacity-95 transition-opacity font-bold shadow-md" type="submit">
+            Gửi hồ sơ ứng tuyển
+          </button>
+<p class="text-center font-label-sm text-on-surface-variant mt-4 italic">Chỉ mất 1 phút để bắt đầu hành trình của bạn.</p>
+</div>
+</form>
+</div>
+</div>
+</section><footer class="bg-primary text-on-primary py-16 md:py-24 px-margin-mobile md:px-gutter">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-6">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary mb-6 block" href="#">KITA BOOKS</a>
+<p class="font-body-lg text-on-primary-container max-w-md">Lan tỏa tri thức. Đồng hành cùng những người trẻ muốn lớn lên bằng giá trị thật.</p>
+</div>
+<div class="lg:col-span-3">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed mb-8">KHÁM PHÁ</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#cong-viec">Công việc</a></li>
+<li class=""><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#hanh-trinh">Hành trình</a></li>
+<li class=""><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#thu-nhap">Thu nhập</a></li>
+<li class=""><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#quyen-loi">Quyền lợi</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3">
+  <h4 class="font-label-lg text-label-lg uppercase tracking-widest text-primary-fixed mb-8">LIÊN HỆ</h4>
+  <ul class="space-y-4">
+    <li class="flex items-start gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-on-primary-container"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+      <a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="mailto:hanghr04@gmail.com">hanghr04@gmail.com</a>
+    </li>
+    <li class="flex items-start gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-on-primary-container"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span class="font-body-md text-on-primary-container">0396729450 (Ms. Hằng)</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-on-primary-container"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      <span class="font-body-md text-on-primary-container text-sm">09 Sunrise I, Manor Central Park, Nguyễn Xiển, Hà Nội.</span>
+    </li>
+  </ul>
+</div></div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-on-primary-fixed-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-sm text-on-primary-container text-label-sm uppercase tracking-wider">© 2024 KITA BOOKS. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+</body></html>
