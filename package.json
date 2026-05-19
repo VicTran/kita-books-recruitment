@@ -1,0 +1,14 @@
+{
+  "name": "kita-books-recruitment",
+  "version": "1.0.0",
+  "description": "Recruitment landing page for KITA BOOKS Marketing team.",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i input.css -o style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss": "^3.4.1"
+  }
+}
